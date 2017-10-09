@@ -2,5 +2,5 @@
 
 Token* LexicalAnalyzer::GetNextToken()
 {
-
+	return nullptr;
 }

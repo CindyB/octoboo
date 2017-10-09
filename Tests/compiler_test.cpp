@@ -10,9 +10,11 @@ namespace Tests
 	{
 	public:
 		
-		TEST_METHOD(Given_When_Then)
+		TEST_METHOD(FirstPhase)
 		{
-			
+			Compiler* compiler = new Compiler("t");
+
+			compiler->Compile();
 		}
 
 	};

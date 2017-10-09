@@ -112,10 +112,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="compiler.h" />
+    <ClInclude Include="lexical_analyzer.h" />
     <ClInclude Include="syntax_analyzer.h" />
+    <ClInclude Include="token.h" />
+    <ClInclude Include="token_code.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="compiler.cpp" />
+    <ClCompile Include="lexical_analyzer.cpp" />
+    <ClCompile Include="syntax_analyzer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

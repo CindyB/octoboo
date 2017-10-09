@@ -12,7 +12,7 @@ enum TokenCode {
 	div_op = 7,
 	left_parenthesis = 8,
 	right_parenthesis = 9,
-	semi_colon = 10;
+	semi_colon = 10
 };
 
 #endif // ! TOKEN_CODE_H_
