@@ -6,17 +6,19 @@
 class SyntaxAnalyzer
 {
 private:
-	LexicalAnalyzer* lexicalAnalyzer;
+	LexicalAnalyzer* m_LexicalAnalyzer;
 public:
 	SyntaxAnalyzer(std::string filepath)
 	{
-		lexicalAnalyzer = new LexicalAnalyzer(filepath);
+		m_LexicalAnalyzer = new LexicalAnalyzer(filepath);
 	};
 
 	~SyntaxAnalyzer()
 	{
-		delete lexicalAnalyzer;
+		delete m_LexicalAnalyzer;
 	}
+
+	void Analyze();
 };
 
 #endif // ! SYNTAX_ANALYZER_H_

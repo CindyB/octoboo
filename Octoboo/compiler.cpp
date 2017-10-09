@@ -2,4 +2,5 @@
 
 void Compiler::Compile()
 {
+	syntaxAnalyzer->Analyze();
 }
