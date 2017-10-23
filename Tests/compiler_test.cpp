@@ -12,7 +12,7 @@ namespace Tests
 		
 		TEST_METHOD(FirstPhase)
 		{
-			Compiler* compiler = new Compiler("..\..\program.oc");
+			Compiler* compiler = new Compiler("./../program.oc");
 
 			compiler->Compile();
 		}

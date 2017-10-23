@@ -13,8 +13,13 @@ private:
 public:
 	LexicalAnalyzer(std::string filepath){
 		m_filepath = filepath;
-		m_Stream = new std::ifstream(filepath);
+		m_Stream = new std::ifstream(filepath, std::ifstream::in);
 	};
+
+	~LexicalAnalyzer()
+	{
+		delete m_Stream;
+	}
 
 	Token* GetNextToken();
 };
