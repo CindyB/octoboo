@@ -27,14 +27,14 @@ Token* LexicalAnalyzer::GetNextToken()
 	}
 	else//q0->qsymbol
 	{
-		if (c == '+') return new Token(std::string(c, 1), TokenCode::add_op);
-		if (c == '-') return new Token(std::string(c, 1), TokenCode::sub_op);
-		if (c == '*') return new Token(std::string(c, 1), TokenCode::mul_op);
-		if (c == '\\') return new Token(std::string(c, 1), TokenCode::div_op);
-		if (c == '=') return new Token(std::string(c, 1), TokenCode::assign_op);
-		if (c == ';') return new Token(std::string(c, 1), TokenCode::semi_colon);
-		if (c == '(') return new Token(std::string(c, 1), TokenCode::left_parenthesis);
-		if (c == ')') return new Token(std::string(c, 1), TokenCode::right_parenthesis);
+		if (c == '+') return new Token(std::string(1, c), TokenCode::add_op);
+		if (c == '-') return new Token(std::string(1, c), TokenCode::sub_op);
+		if (c == '*') return new Token(std::string(1, c), TokenCode::mul_op);
+		if (c == '\\') return new Token(std::string(1, c), TokenCode::div_op);
+		if (c == '=') return new Token(std::string(1, c), TokenCode::assign_op);
+		if (c == ';') return new Token(std::string(1, c), TokenCode::semi_colon);
+		if (c == '(') return new Token(std::string(1, c), TokenCode::left_parenthesis);
+		if (c == ')') return new Token(std::string(1, c), TokenCode::right_parenthesis);
 		return nullptr;
 	}
 }
