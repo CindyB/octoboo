@@ -3,7 +3,7 @@
 
 Token* LexicalAnalyzer::GetNextToken()
 {
-	if (!m_Stream->is_open() || m_Stream->eof()) return nullptr;
+	if (!m_Stream->is_open()) return nullptr;
 
 	char c = m_Stream->get();
 
@@ -35,5 +35,6 @@ Token* LexicalAnalyzer::GetNextToken()
 		if (c == ';') return new Token(std::string(c, 1), TokenCode::semi_colon);
 		if (c == '(') return new Token(std::string(c, 1), TokenCode::left_parenthesis);
 		if (c == ')') return new Token(std::string(c, 1), TokenCode::right_parenthesis);
+		return nullptr;
 	}
 }

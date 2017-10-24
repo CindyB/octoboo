@@ -21,5 +21,22 @@ namespace Tests
 			Assert::IsTrue(expected.Lexeme().compare(actual->Lexeme()) == 0);
 		}
 
+		TEST_METHOD(GivenNotExistingFile_WhenGetNextToken_ThenNullPtrIsReturnedAsToken)
+		{
+			LexicalAnalyzer* analyzer = new LexicalAnalyzer("./../Tests/TestFiles/notexisting.oc");
+
+			Token* actual = analyzer->GetNextToken();
+
+			Assert::IsTrue(actual == nullptr);
+		}
+
+		TEST_METHOD(GivenEmptyFile_WhenGetNextToken_ThenNullPtrIsReturnedAsToken)
+		{
+			LexicalAnalyzer* analyzer = new LexicalAnalyzer("./../Tests/TestFiles/empty.oc");
+
+			Token* actual = analyzer->GetNextToken();
+
+			Assert::IsTrue(actual == nullptr);
+		}
 	};
 }
