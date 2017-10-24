@@ -6,6 +6,6 @@ void SyntaxAnalyzer::Analyze()
 	Token* token = nullptr;
 	while ((token = m_LexicalAnalyzer->GetNextToken()) != nullptr)
 	{
-		token->Print();
+		std::cout << "Lexeme is" << token->Lexeme() << " with code " << token->Code();
 	}
 }

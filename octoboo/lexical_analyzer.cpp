@@ -14,7 +14,7 @@ Token* LexicalAnalyzer::GetNextToken()
 		{
 			identifier.append(1, c);
 			c = m_Stream->get();
-		} while (!isspace(c) && c != ';');
+		} while (!isspace(c) && c != ';' && !m_Stream->eof());
 
 		return new Token(identifier, TokenCode::identifier);
 	}
