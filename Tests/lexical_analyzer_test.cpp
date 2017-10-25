@@ -139,5 +139,16 @@ namespace Tests
 			Assert::IsTrue(expected.Code() == actual->Code());
 			Assert::IsTrue(expected.Lexeme().compare(actual->Lexeme()) == 0);
 		}
+
+		TEST_METHOD(GivenFileWithIntLiteral_WhenGetNextToken_ThenTokenOfIntLiteralTypeIsReturned)
+		{
+			Token expected("1345", TokenCode::int_litteral);
+			LexicalAnalyzer* analyzer = new LexicalAnalyzer("./../Tests/TestFiles/int.oc");
+
+			Token* actual = analyzer->GetNextToken();
+
+			Assert::IsTrue(expected.Code() == actual->Code());
+			Assert::IsTrue(expected.Lexeme().compare(actual->Lexeme()) == 0);
+		}
 	};
 }

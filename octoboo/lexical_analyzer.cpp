@@ -20,10 +20,13 @@ Token* LexicalAnalyzer::GetNextToken()
 	}
 	else if(isdigit(c))//q0 -> q2
 	{
+		std::string value = std::string();
 		do
 		{
+			value.append(1, c);
 			c = m_Stream->get();
-		} while (!isspace(c));
+		} while (!isspace(c) && c != ';' && !m_Stream->eof());
+		return new Token(value, TokenCode::int_litteral);
 	}
 	else//q0->qsymbol
 	{
