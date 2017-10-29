@@ -10,12 +10,7 @@ namespace Tests
 	{
 	public:
 		
-		TEST_METHOD(FirstPhase)
-		{
-			Compiler* compiler = new Compiler("./../program.oc");
-
-			compiler->Compile();
-		}
+		
 
 	};
 }
